@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+
+#main {
+  
+}
+
+.button {
+  font-size: 4em;
+  height: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#recordHole {
+  color: white;
+  background-color: orange;
+}
+
+#holeMap {
+  color: white;
+  background-color: blue;
+}
