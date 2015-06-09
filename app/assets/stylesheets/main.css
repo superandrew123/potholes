@@ -20,6 +20,22 @@ body {
 }
 
 #holeMap {
-  color: white;
   background-color: blue;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:active {
+  color: white;
+  text-decoration: none;
 }
