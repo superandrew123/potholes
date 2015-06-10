@@ -1,5 +1,6 @@
 
 function getLocation() {
+  alert("Give me a sec to find you");
   navigator.geolocation.getCurrentPosition(geoSuccess, geoFail);
 }
 
