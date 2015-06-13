@@ -7,6 +7,10 @@ body {
   
 }
 
+#geoForm {
+  display: none;
+}
+
 .button {
   font-size: 4em;
   height: 50%;

@@ -1,6 +1,4 @@
 
-<!-- <div id="demo">TEST BOX</div> -->
-
 <div id="main">
 
 <!-- POTHOLE Button -->
@@ -10,3 +8,8 @@
 <a href="/test"><div id="holeMap" class="button">POTHOLE Map</div></a>
 
 </div>
+
+<%= form_tag("/hole", method: "POST", id: "geoForm") do %>
+  <%= text_field_tag "location[latitude]" %>
+  <%= text_field_tag "location[longitude]" %>
+<% end %>

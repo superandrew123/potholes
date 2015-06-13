@@ -1,8 +1,8 @@
 class HoleController < ApplicationController
   def create
-    Hole.create(hole_params)
+    @hole = Hole.create(hole_params)
 
-    render nothing: true
+    redirect_to show_path(@hole)
   end
 
   private

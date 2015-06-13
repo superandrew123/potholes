@@ -4,7 +4,7 @@ class MapController < ApplicationController
     # root
   end
 
-  def test
-    
+  def show
+    @location = Hole.find(params[:id]).return_coords
   end
 end

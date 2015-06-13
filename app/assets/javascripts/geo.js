@@ -15,17 +15,22 @@ function geoFail(){
 
 function recordLocation(location){
   // send data to hole controller
-  var data = {
-    location: {
-      latitude: location[0],
-      longitude: location[1]
-    }
-  }
-  $.ajax("/hole", {
-    method: "POST",
-    data: data,
-    complete: function(){
-      window.location.href = "/test";
-    }
-  })
+  $("#location_latitude").val(location[0]);
+  $("#location_longitude").val(location[1]);
+  $("#geoForm").submit();
+
+
+  // var data = {
+  //   location: {
+  //     latitude: location[0],
+  //     longitude: location[1]
+  //   }
+  // }
+  // $.ajax("/hole", {
+  //   method: "POST",
+  //   data: data
+  //   complete: function(){
+  //     window.location.href = "/show";
+  //   }
+  // })
 }

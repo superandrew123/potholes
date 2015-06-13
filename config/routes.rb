@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'map#main'
 
   get '/test' => 'map#test'
-  
+  get '/show/:id' => 'map#show', as: :show
   post '/hole' => 'hole#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
