@@ -5,7 +5,7 @@ function getLocation() {
 }
 
 function geoSuccess(position){
-  var location = [position.coords.latitude, position.coords.longitude]
+  var location = [position.coords.latitude, position.coords.longitude];
   recordLocation(location);
 }
 
@@ -18,19 +18,4 @@ function recordLocation(location){
   $("#location_latitude").val(location[0]);
   $("#location_longitude").val(location[1]);
   $("#geoForm").submit();
-
-
-  // var data = {
-  //   location: {
-  //     latitude: location[0],
-  //     longitude: location[1]
-  //   }
-  // }
-  // $.ajax("/hole", {
-  //   method: "POST",
-  //   data: data
-  //   complete: function(){
-  //     window.location.href = "/show";
-  //   }
-  // })
 }
