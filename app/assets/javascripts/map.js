@@ -1,15 +1,24 @@
 $(document).ready(function(){
   // $("#demo").click(getLocation);
-  setHeight();
+  setHeight(".button", 0.5);
   $("#recordHole").click(getLocation);
 });
 
-function setHeight(){
-  var h = $(this).height()/2;
+function setHeight(selector, percent){
+  var h = $(this).height()*percent;
   // debugger;
-  $(".button").height(h);
-  $(".button").css("line-height", (h + "px"))
+  $(selector).height(h);
+  if(selector === ".button"){
+    $(selector).css("line-height", (h + "px"))
+  }
 }
+
+// function setWidth(selector, percent){
+//   var h = $(this).width()*percent;
+//   // debugger;
+//   $(selector).height(h);
+//   $(selector).css("line-height", (h + "px"))
+// }
 
 function placeAllMarkers(map, locations){
   for(var i = 0; i < locations.length; i++){

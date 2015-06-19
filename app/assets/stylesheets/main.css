@@ -22,7 +22,9 @@ body {
   color: white;
   background-color: orange;
 }
-
+#mapHolder {
+  width: 100%;
+}
 #holeMap {
   background-color: blue;
 }

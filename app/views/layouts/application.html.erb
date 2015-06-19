@@ -2,13 +2,15 @@
 <html>
 <head>
   <title>Potholes</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  <% if "#{controller_name} #{action_name}" == "map show"%>
+  <% page_id = "#{controller_name} #{action_name}" %>
+  <% if page_id == "map show" || page_id == "map index"%>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["google_maps"] %>"></script>
     <script>
       function initialize() {
+        setHeight("#map-holder", 1);
         var mapOptions = {
           center: { lat: <%= @current_location[0] %>, lng: <%= @current_location[1] %>},
           zoom: 18
