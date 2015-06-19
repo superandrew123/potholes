@@ -1,4 +1,14 @@
-<div id="mapHolder"></div>
-<script>
-  showPosition(<%= @location %>);
-</script>
+<div id="map-holder" style="width:500px;height:380px;"></div>
+<!-- <script>
+  $(function() {
+    // $("#map").googleMap({
+    //   zoom: 15, // Initial zoom level (optional)
+    //   coords: <%= @current_location %>, // Map center (optional)
+    //   type: "ROADMAP" // Map type (optional)
+    // });
+
+    var locations = <%= @locations %>;
+    placeAllMarkers(locations);
+    debugger;
+  });
+</script> -->

@@ -5,6 +5,7 @@ class MapController < ApplicationController
   end
 
   def show
-    @location = Hole.find(params[:id]).return_coords
+    @current_location = Hole.find(params[:id]).return_coords
+    @locations = Hole.all_coords
   end
 end

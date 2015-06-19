@@ -11,10 +11,13 @@ function setHeight(){
   $(".button").css("line-height", (h + "px"))
 }
 
-function showPosition(position) {
-    var latlon = position[0] + "," + position[1];
-    debugger;
-    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
-    +latlon+"&zoom=14&size=400x300&sensor=false";
-    document.getElementById("mapHolder").innerHTML = "<img src='"+img_url+"'>";
+function placeAllMarkers(map, locations){
+  for(var i = 0; i < locations.length; i++){
+    var coords = new google.maps.LatLng(locations[i][0], locations[i][1]);
+    var marker = new google.maps.Marker({
+      position: coords,
+      map: map,
+      title: 'Hello World!'
+    });
+  };
 }
