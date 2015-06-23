@@ -3,8 +3,8 @@ class HoleController < ApplicationController
     @hole = Hole.new(hole_params)
     @hole.round_to_four
     @hole = Hole.already_reported?(@hole)
-
-    redirect_to show_path(@hole)
+    params[:hole_id] = @hole.id
+    redirect_to map_path
   end
 
   private

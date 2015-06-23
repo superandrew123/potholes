@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   
   <% page_id = "#{controller_name} #{action_name}" %>
-  <% if page_id == "map show" || page_id == "map index"%>
+  <% if page_id == "map show" || page_id == "map map"%>
     <%= render 'layouts/load_map.html' %>
   <% end %>
       

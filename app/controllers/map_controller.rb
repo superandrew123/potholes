@@ -9,7 +9,8 @@ class MapController < ApplicationController
     @locations = Hole.all_coords
   end
 
-  def index
+  def map
+    binding.pry
     @current_location = Hole.last.return_coords
     @locations = Hole.all_coords
   end

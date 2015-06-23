@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root 'map#main'
-  get '/index' => 'map#index'
+  get '/map' => 'map#map'
   get '/show/:id' => 'map#show', as: :show
   post '/hole' => 'hole#create'
 
