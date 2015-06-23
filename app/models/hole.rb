@@ -1,7 +1,6 @@
 class Hole < ActiveRecord::Base
 
   # Check for another hole of the same coords
-  before_create :round_to_four
 
   def self.all_coords
     Hole.all.collect {|hole| hole.return_coords }
@@ -14,5 +13,17 @@ class Hole < ActiveRecord::Base
 
   def return_coords
     [self.latitude.to_f, self.longitude.to_f]
+  end
+
+  def self.already_reported?(new_hole)
+    reported_hole = Hole.where("latitude=? AND longitude=?", new_hole.latitude, new_hole.longitude).take
+    if reported_hole
+      reported_hole.count += 1
+      reported_hole.save
+      reported_hole
+    else
+      new_hole.save
+      new_hole
+    end
   end
 end

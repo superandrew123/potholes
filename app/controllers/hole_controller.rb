@@ -1,10 +1,8 @@
 class HoleController < ApplicationController
   def create
-    # binding.pry
     @hole = Hole.new(hole_params)
     @hole.round_to_four
-    # lat/long accuracy to 4 decimals is effective
-    binding.pry
+    @hole = Hole.already_reported?(@hole)
 
     redirect_to show_path(@hole)
   end
