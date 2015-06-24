@@ -7,8 +7,8 @@ Potholes NYC will allow users to report potholes then will display all the repor
 * ~~Store location data~~
 * ~~Show locations on a google map~~
 * ~~Check for duplicate reports~~
-  * Change routing for reporting a hole to the map page
-  * Display number of times that hole has been reported
+  * ~~Change routing for reporting a hole to the map page~~
+  * ~~Display number of times that hole has been reported~~
 * ~~Put on Heroku~~
 * Change alert message
 * Show a count of pot holes on a given route
