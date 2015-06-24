@@ -1,7 +1,6 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["google_maps"] %>"></script>
 <script>
   function initialize() {
-    setHeight("#map-holder", 1);
     var mapOptions = {
       center: { lat: <%= @current_location[0] %>, lng: <%= @current_location[1] %>},
       zoom: 18

@@ -1,6 +1,11 @@
 $(document).ready(function(){
   setHeight(".button", 0.5);
+  setHeight("#map-holder", 1);
   $("#recordHole").click(getLocation);
+  $(window).resize(function(){
+    setHeight(".button", 0.5);
+    setHeight("#map-holder", 1);
+  });
 });
 
 function setHeight(selector, percent){
