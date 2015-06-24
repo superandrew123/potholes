@@ -12,7 +12,7 @@ class Hole < ActiveRecord::Base
   end
 
   def return_coords
-    [self.latitude.to_f, self.longitude.to_f]
+    [self.latitude, self.longitude, self.count, self.created_at.strftime("First reported on %m/%d/%Y")]
   end
 
   def self.already_reported?(new_hole)

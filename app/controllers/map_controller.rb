@@ -4,14 +4,13 @@ class MapController < ApplicationController
     # root
   end
 
-  def show
-    @current_location = Hole.find(params[:id]).return_coords
-    @locations = Hole.all_coords
-  end
-
   def map
-    binding.pry
     @current_location = Hole.last.return_coords
     @locations = Hole.all_coords
   end
+
+  private
+    def map_params
+
+    end
 end
